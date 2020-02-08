@@ -12,7 +12,7 @@ export default class FormsListReport extends React.Component {
     }
 
     getForms = () => {
-        fetch(`http://localhost:4000/api/forms`, {
+        fetch(`https://shrouded-shore-40312.herokuapp.com/api/forms`, {
             // mode: "no-cors",
             method: "GET",
             headers: {
@@ -31,7 +31,7 @@ export default class FormsListReport extends React.Component {
         this.state.forms.map((item) => {
             if (i === item._id) {
                 console.log("Iteeeeeeeem : ", item)
-                fetch(`http://localhost:4000/api/forms/info/${item.title}`, {
+                fetch(`https://shrouded-shore-40312.herokuapp.com/api/forms/info/${item.title}`, {
                     // mode: "no-cors",
                     method: "GET",
                     headers: {

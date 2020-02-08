@@ -45,7 +45,7 @@ export default class FormPage extends React.Component {
             console.log("dnljdbvgljgbnaekng;k", item)
             if (item.fieldType === 'Location') {
                 console.log(' lat o longi ke mire be server => ', values[item.name].lat, ' , ', values[item.name].long)
-                fetch(`http://localhost:4000/api/testpoint/${values[item.name].lat}/${values[item.name].long}`, {
+                fetch(`https://shrouded-shore-40312.herokuapp.com/api/testpoint/${values[item.name].lat}/${values[item.name].long}`, {
                     // mode: "no-cors",
                     method: "GET",
                     headers: {
@@ -65,7 +65,7 @@ export default class FormPage extends React.Component {
                                 if (i === form.fields.length - 1) {
                                     try {
                                         console.log("2222Fatemehhhhhh : ", values)
-                                        const data = await this.putData(`http://localhost:4000/api/forms/send`, values);
+                                        const data = await this.putData(`https://shrouded-shore-40312.herokuapp.com/api/forms/send`, values);
                                         console.log("send to server => ", JSON.stringify(data));
                                         this.setState({
                                             errorMessage: '',
@@ -83,7 +83,7 @@ export default class FormPage extends React.Component {
             } else if (i === form.fields.length - 1) {
                 try {
                     console.log("2222Fatemehhhhhh : ", values)
-                    const data = await this.putData(`http://localhost:4000/api/forms/send`, values);
+                    const data = await this.putData(`https://shrouded-shore-40312.herokuapp.com/api/forms/send`, values);
                     console.log("send to server => ", JSON.stringify(data));
                     this.setState({
                         errorMessage: '',

@@ -44,7 +44,7 @@ class SignupPage extends React.Component {
       })
     }
     else {
-      fetch(`http://localhost:4000/api/users/${values['username']}`, {
+      fetch(`https://shrouded-shore-40312.herokuapp.com/api/users/${values['username']}`, {
         // mode: "no-cors",
         method: "GET",
         headers: {
@@ -62,7 +62,7 @@ class SignupPage extends React.Component {
               }
               else {
                 try {
-                  const data = this.putData(`http://localhost:4000/api/adduser`, values);
+                  const data = this.putData(`https://shrouded-shore-40312.herokuapp.com/api/adduser`, values);
                   console.log("send to server => ", JSON.stringify(data));
                   let isFieldAgent = values['type'] === 'Field Agent' ? true : false;
                   this.props.chooseRole(isFieldAgent)

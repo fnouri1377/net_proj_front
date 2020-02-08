@@ -28,7 +28,7 @@ class LoginPage extends React.Component {
       })
     }
     else {
-      fetch(`http://localhost:4000/api/users/${values["username"]}`, {
+      fetch(`https://shrouded-shore-40312.herokuapp.com/api/users/${values["username"]}`, {
         // mode: "no-cors",
         method: "GET",
         headers: {

@@ -90,7 +90,7 @@ class FormInfo extends React.Component {
 
   getPredefinedAreas = () => {
     let names = [];
-    fetch(`http://localhost:4000/api/areas`, {
+    fetch(`https://shrouded-shore-40312.herokuapp.com/api/areas`, {
       // mode: "no-cors",
       method: "GET",
       headers: {

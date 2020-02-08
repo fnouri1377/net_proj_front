@@ -12,7 +12,7 @@ export default class DisplayForms extends React.Component {
   }
 
   getForms = () => {
-    fetch(`http://localhost:4000/api/forms`, {
+    fetch(`https://shrouded-shore-40312.herokuapp.com/api/forms`, {
       // mode: "no-cors",
       method: "GET",
       headers: {
@@ -29,7 +29,7 @@ export default class DisplayForms extends React.Component {
 
   getForm = i => {
     console.log("ENTER getform => i : ", i);
-    fetch(`http://localhost:4000/api/forms/${i}`, {
+    fetch(`https://shrouded-shore-40312.herokuapp.com/api/forms/${i}`, {
       // mode: "no-cors",
       method: "GET",
       headers: {
